@@ -1,0 +1,13 @@
+mdb-card-img:focus { 
+    border: solid 10px #6600ff; 
+}
+button {
+    background-color: #6600ff; 
+    color: #ffffff;
+}
+
+.marco {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}

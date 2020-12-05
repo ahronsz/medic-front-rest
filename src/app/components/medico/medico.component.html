@@ -1,0 +1,67 @@
+
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row justify-content-around">
+    <div class="col-8">
+      <div class="container mt-5">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <table class="table  text-center">
+              <thead>
+                <tr>
+                  <th>
+                    <h2>
+                      Medicos
+                    </h2>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let medico of medicos; let i = index">
+                  <td (click)="setMedico(medico.cod_med)" tabindex="{{i}}" style="padding: 0.5em;">
+                    <h3>{{medico.nombres}}</h3>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col col-lg-2">
+      <button class="btn btn-default mt-5" routerLink="/tipo"><h3>Atrás</h3></button>
+    </div>
+    <div class="col-md-auto">
+    </div>
+    <div class="col-md-auto">
+    </div>
+    <div class="col-md-auto">
+    </div>
+    <div class="col-md-auto">
+    </div>
+    <div class="col-md-auto">
+    </div>
+    <div class="col-md-auto">
+    </div>
+    <div class="col-md-auto">
+    </div>
+    <div class="col-md-auto">
+    </div>
+    <div class="col col-lg-2">
+      <button class="btn btn-default mt-5" routerLink="/paso2"><h3>Continuar</h3></button>
+    </div>
+  </div>
+</div>
+
+
+

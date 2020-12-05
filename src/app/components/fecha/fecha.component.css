@@ -1,0 +1,22 @@
+td:focus { 
+    background-color: 	#ff00ff; 
+}
+button {
+    background-color: #6600ff; 
+    color: #ffffff;
+    width: 100%;
+    height: 3vw;
+    object-fit: cover;
+    
+}
+
+thead {
+    background-color: #6600ff; 
+    color: #ffffff;
+}
+
+mdb-card-img {
+    width: 100%;
+    height: 10vw;
+    object-fit: cover;
+}

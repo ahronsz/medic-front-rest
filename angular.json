@@ -24,9 +24,16 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -119,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "medic-front-rest"
+    }
+  },
+  "defaultProject": "medic-front-rest",
+  "cli": {
+    "analytics": "290f20a6-a146-490b-9355-feb65ef37c09"
+  }
 }

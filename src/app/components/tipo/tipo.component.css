@@ -1,0 +1,12 @@
+button {
+    background-color: #6600ff; 
+    color: #ffffff;
+    width: 100%;
+    height: 3vw;
+    object-fit: cover;
+    
+}
+
+img:focus { 
+    background-color: 	#ff00ff; 
+}
