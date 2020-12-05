@@ -10,7 +10,7 @@ import { Cita } from '../../entidades/Cita';
 })
 export class EspecialidadComponent implements OnInit {
 
-  isSelect: boolean;
+  isSelect: boolean = true;
   especialidades: Especialidad[];
   cita: Cita = new Cita();
 
@@ -23,11 +23,18 @@ export class EspecialidadComponent implements OnInit {
   }
 
   getEspecialidad(codEspecialidad): void {
-
     this.cita.cod_esp = codEspecialidad;
     this.cita.cod_pac = 'pac_1';
     localStorage.setItem('cita', JSON.stringify(this.cita));
     console.log(codEspecialidad);
+  }
+
+  onFocus(e) {
+    this.isSelect = false;
+    console.log('estoy fuqueado');
+  }
+
+  onBlur(e) {
   }
 
 }

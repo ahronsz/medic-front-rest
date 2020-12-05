@@ -21,8 +21,44 @@
               </thead>
               <tbody>
                 <tr *ngFor="let medico of medicos; let i = index">
-                  <td (click)="setMedico(medico.cod_med)" tabindex="{{i}}" style="padding: 0.5em;">
-                    <h3>{{medico.nombres}}</h3>
+                  <td (click)="setMedico(medico.cod_med)" tabindex="{{i}}" style="padding: 0.5em;" (focus)="onFocus($event)" (blur)="onBlur($event)">
+                    <div class="row">
+                      <div class="col-9">
+                        <h3>{{medico.nombres}}</h3>
+                      </div>
+                      <div class="col-3">
+                        <button type="button" class="btn btn-primary" (click)="openModal(template)">Ver mas</button>
+                        <ng-template #template>
+                          <div class="modal-header">
+                            <div class="cabeza">
+                              <h3><img src="https://i.imgur.com/SFMgZKV.png" width="50" height="50"> CLINICA INTERNACIONAL</h3>
+                            </div>
+                          </div>
+                          <div class="modal-body">
+                            <div class="container">
+                              <div class="row">
+                                <br>
+                                <div class="w-100"></div>
+                                <div class="col"><br><h4>{{medico.sexo === "M" ? "Dr." : "Dra."}} {{medico.nombres}} {{medico.apellidos}}</h4></div>
+                                <div class="col"><img src="{{medico.foto}}" width="150" height="150"></div>
+                                <div class="w-100"><hr></div>
+                                <div class="col"><h5>Edad: </h5></div>
+                                <div class="col"><h5>{{medico.edad}}</h5></div>
+                                <div class="w-100"></div>
+                                <div class="col"><h5>Fecha de nacimiento: </h5></div>
+                                <div class="col"><h5>{{medico.fechaNaci}}</h5></div>
+                                <div class="w-100"></div>
+                                <br>
+                                <br>
+                                <button type="button"  (click)="modalRef.hide()">
+                                  <h3>Cerrar</h3>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </ng-template>
+                      </div>
+                    </div>
                   </td>
                 </tr>
               </tbody>
@@ -58,7 +94,7 @@
     <div class="col-md-auto">
     </div>
     <div class="col col-lg-2">
-      <button class="btn btn-default mt-5" routerLink="/paso2"><h3>Continuar</h3></button>
+      <button class="btn btn-default mt-5" routerLink="/paso2" [disabled]="isSelect"><h3>Continuar</h3></button>
     </div>
   </div>
 </div>

@@ -5,10 +5,10 @@
 <div class="container">
     <div class="row justify-content-around">
       <div class="col-6">
-        <img src="https://i.imgur.com/GaCQJBL.png" width="500" height="500" tabindex="1" (click)="setLink('/medico')">
+        <img src="https://i.imgur.com/GaCQJBL.png" (focus)="onFocus($event)" (blur)="onBlur($event)" width="500" height="500" tabindex="1" (click)="setLink('/medico') ">
       </div>
       <div class="col-6">
-        <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png" width="500" height="500" tabindex="2" (click)="setLink('/paso2')">
+        <img src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png"  (focus)="onFocus($event)" (blur)="onBlur($event)" width="500" height="500" tabindex="2" (click)="setLink('/paso2')">
       </div>
     </div>
 </div>
@@ -38,7 +38,7 @@
       <div class="col-md-auto">
       </div>
       <div class="col col-lg-2">
-        <button class="btn btn-default mt-5" routerLink="{{link}}" ><h3>Continuar</h3></button>
+        <button class="btn btn-default mt-5" routerLink="{{link}}" [disabled]="isSelect"><h3>Continuar</h3></button>
       </div>
     </div>
   </div>

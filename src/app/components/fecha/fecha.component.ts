@@ -21,6 +21,7 @@ export class FechaComponent implements OnInit {
   horaRequest: HoraRequest = new HoraRequest();
 
 
+  isSelect: boolean = true;
   datepickerModel: Date;
   fechaConvertida: string;
   minDate: Date;
@@ -58,5 +59,13 @@ export class FechaComponent implements OnInit {
         res => this.dia = res
       );
     }
+  }
+
+  onFocus(e) {
+    this.isSelect = false;
+    console.log('estoy fuqueado');
+  }
+
+  onBlur(e) {
   }
 }

@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class TipoComponent implements OnInit {
 
   link: string;
+  isSelect: boolean = true;
 
   constructor() { }
 
@@ -17,6 +18,14 @@ export class TipoComponent implements OnInit {
   setLink(url: string): void {
     this.link = url;
     console.log(this.link);
+  }
+
+  onFocus(e) {
+    this.isSelect = false;
+    console.log('estoy fuqueado');
+  }
+
+  onBlur(e) {
   }
 
 }

@@ -14,3 +14,23 @@ thead {
     background-color: #6600ff; 
     color: #ffffff;
 }
+
+div.cabeza{
+    height: 100px;
+    width: 730px;
+    background: #5E58FF;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .modal-body {
+    color: white;
+    background-color: #F95F62;
+  }
+
+.modal-header {
+    background-color: #5E58FF; 
+}

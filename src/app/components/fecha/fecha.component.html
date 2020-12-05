@@ -42,7 +42,7 @@
               </thead>
               <tbody>
                 <tr *ngFor="let horas of dia.hora.horas_m; let i = index">
-                  <td (click)="setHora(dia.hora.horas[i])" tabindex="{{i}}" style="padding: 0.5em;">
+                  <td (click)="setHora(dia.hora.horas[i])" tabindex="{{i}}" style="padding: 0.5em;" (focus)="onFocus($event)" (blur)="onBlur($event)">
                     <h3>{{horas}}</h3>
                   </td>
                 </tr>
@@ -77,7 +77,7 @@
     <div class="col-md-auto">
     </div>
     <div class="col col-lg-2">
-      <button class="btn btn-default mt-5" routerLink="/confirmacion"><h3>Continuar</h3></button>
+      <button class="btn btn-default mt-5" routerLink="/confirmacion" [disabled]="isSelect"><h3>Continuar</h3></button>
     </div>
   </div>
 </div>
